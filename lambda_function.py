@@ -34,7 +34,7 @@ def resize_image(image_content):
 
     # Save the resized image to a BytesIO object
     resized_image_io = BytesIO()
-    resized_image.save(resized_image_io, format='JPEG')
+    resized_image.save(resized_image_io, format='JPEG', quality=85)
     resized_image_io.seek(0)
 
     return resized_image_io.read()
